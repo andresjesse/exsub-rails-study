@@ -1,0 +1,16 @@
+# 1) Build
+
+# For Linux
+docker build --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) .
+
+# For Mac
+# docker build . 
+
+
+# 2) Run
+# $ docker compose up -d web
+
+# 3) Create rails project
+# $ docker compose run web rails new . --force --database=postgresql
+# $ docker compose run web bundle exec rails db:create
+# $ docker compose up -d web
